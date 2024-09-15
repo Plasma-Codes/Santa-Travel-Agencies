@@ -1,0 +1,138 @@
+:root{
+    --primary-color:#111317;
+    --primary-color-light:#1f2125;
+    --primary-color-extra-light:#35373b;
+    --secondary-color: gold;
+    --secondary-color-dark:#d79447;
+    --white:#ffffff;
+    --max-width: 1200px;
+  }
+
+body{
+    background-image: url(background.jpg);
+    height: 110vh;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 250px;
+    position: absolute;
+    top: -5%;
+}
+
+.nav{
+    max-width: var(--max-width);
+    position: absolute;
+    text-decoration: none;
+    top: 40px;
+    left: 430px;
+    }
+    
+    .nav__logo{
+        max-width: 150px;
+    }
+    
+    .nav__links{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 3rem;
+    }
+    
+    .link a {
+        position: relative;
+        padding-bottom: 0.75rem;
+        color: var(--white);
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+    
+    .link a::after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--secondary-color);
+        transition: 0.3s;
+    }
+    
+    .link a:hover::after{
+        width: 80%;
+    }
+
+    .button2 {
+        position: absolute;
+        top: 0px;
+        left: 650px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        padding-block: 0.65rem;
+        padding-inline: 1rem;
+        background-color: var(--secondary-color);
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--primary-color-light);
+        gap: 20px;
+        font-weight: bold;
+        border: 3px solid var(--primary-color-extra-light);
+        outline: none;
+        overflow: hidden;
+        font-size: 17px;
+    }
+    large{
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    .button2:hover {
+        transform: scale(1.05);
+        border-color: #fff9;
+    }
+    .button2:hover .icon {
+        transform: translate(4px);
+    }
+    .button2hover::before {
+        animation: shine 1.5s ease-out infinite;
+    }
+    .button2::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+        );
+        top: 0;
+        left: -100px;
+        opacity: 0.6;
+    }
+
+    @keyframes shine {
+        0% {
+        left: -100px;
+        }
+        60% {
+        left: 100%;
+        }
+        to {
+        left: 100%;
+        }
+    }
